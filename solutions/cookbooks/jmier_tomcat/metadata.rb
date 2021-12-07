@@ -1,6 +1,6 @@
 name 'jmier_tomcat'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Jonathan Mier'
+maintainer_email 'mier.jonathan@outlook.com'
 license 'All Rights Reserved'
 description 'Installs/Configures jmier_tomcat'
 version '0.1.0'
