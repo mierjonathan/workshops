@@ -51,7 +51,7 @@ end
 
 # loop through directories in /opt/tomcat to change ownership to tomcat
 node['jmier_tomcat']['tomcat_directories'].each do |dir|
-  execute "/opt/tomcat/#{dir}" do
+  execute "make tomcat owner of /opt/tomcat/#{dir}" do
     action :run
     command "chown -R tomcat /opt/tomcat/#{dir}"
     not_if "[ $(stat -c %U /opt/tomcat/#{dir})  = 'tomcat' ]"

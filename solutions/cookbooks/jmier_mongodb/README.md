@@ -54,3 +54,14 @@ jmier-mongobd-centos-7  Vagrant  ChefZero     Inspec    Ssh        <Not Created>
 # To deploy vm and run cookbook on vm
 $ kitchen-converge jmier-mongobd-centos-7
 ```
+## ChefSpec and Inspec Testing
+
+## ChefSpec
+To run ChefSpec tests run the following command
+`chef exec rspec`
+ChefSpec test can be located in the `spec/unit/recipes` directory.
+
+## Inspec
+To run Inspec test run the following command 
+`kitchen verify`
+Inspec test can be located in the `test/integration/default` directory.

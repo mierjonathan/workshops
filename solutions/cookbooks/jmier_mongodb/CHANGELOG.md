@@ -7,3 +7,4 @@ This file is used to list changes made in each version of the jmier_mongodb cook
 Initial release.
 
 - change 1 Updated the README.md and metadata. 
+- Added Inspec and ChefSpec tests
