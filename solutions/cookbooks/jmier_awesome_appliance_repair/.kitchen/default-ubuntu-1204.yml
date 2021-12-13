@@ -1,0 +1,7 @@
+---
+hostname: 127.0.0.1
+port: '2200'
+username: vagrant
+ssh_key: "/Users/jonny/chef/workshops/solutions/cookbooks/jmier_awesome_appliance_repair/.kitchen/kitchen-vagrant/default-ubuntu-1204/.vagrant/machines/default/virtualbox/private_key"
+last_action: create
+last_error: Kitchen::ActionFailed

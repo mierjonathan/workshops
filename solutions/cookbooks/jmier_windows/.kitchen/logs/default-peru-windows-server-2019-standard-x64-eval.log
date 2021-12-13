@@ -1,0 +1,10 @@
+I, [2021-12-09T14:24:47.080922 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval: -----> Creating <default-peru-windows-server-2019-standard-x64-eval>...
+I, [2021-12-09T14:24:49.239467 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2021-12-09T14:24:49.516527 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval: ==> default: Box 'peru/windows-server-2019-standard-x64-eval' could not be found. Attempting to find and install...
+I, [2021-12-09T14:24:49.516629 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval:     default: Box Provider: virtualbox
+I, [2021-12-09T14:24:49.516813 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval:     default: Box Version: >= 0
+I, [2021-12-09T14:24:50.643309 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval: ==> default: Loading metadata for box 'peru/windows-server-2019-standard-x64-eval'
+I, [2021-12-09T14:24:50.643665 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval:     default: URL: https://vagrantcloud.com/peru/windows-server-2019-standard-x64-eval
+I, [2021-12-09T14:24:51.239446 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval: ==> default: Adding box 'peru/windows-server-2019-standard-x64-eval' (v20211016.01) for provider: virtualbox
+I, [2021-12-09T14:24:51.267825 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval:     default: Downloading: https://vagrantcloud.com/peru/boxes/windows-server-2019-standard-x64-eval/versions/20211016.01/providers/virtualbox.box
+I, [2021-12-09T14:24:52.323757 #39258]  INFO -- default-peru-windows-server-2019-standard-x64-eval: [KProgress: 0% (Rate: 0*/s, Estimated time remaining: --:--:--)[KProgress: 100% (Rate: 349/s, Estimated time remaining: --:--:--)[KProgress: 0% (Rate: 0*/s, Estimated time remaining: --:--:--)[KDownload redirected to host: vagrantcloud-files-production.s3-accelerate.amazonaws.com

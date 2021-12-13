@@ -1,0 +1,140 @@
+{
+  "revision_id": "c7951f37ffd2932121a0fd152255b63d1a5a5a919339cce12b371ad8c0a226fe",
+  "name": "jmier_awesome_appliance_repair",
+  "run_list": [
+    "recipe[jmier_awesome_appliance_repair::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "jmier_awesome_appliance_repair": {
+      "version": "0.1.0",
+      "identifier": "b929f4f91a48f1c58ef6f3b7fc1c0de1fc5f1190",
+      "dotted_decimal_identifier": "52119002819479793.55607761714019356.15264252891536",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "git@github.com:mierjonathan/workshops.git",
+        "revision": "255e7048c23179d33bc457e13b18bb7a86fa501c",
+        "working_tree_clean": true,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/development"
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    },
+    "poise": {
+      "version": "2.8.2",
+      "identifier": "5eada1fb133c83935c2ce413b8f2506e4e3cab6d",
+      "dotted_decimal_identifier": "26649559024483459.41478169451280626.88434689223533",
+      "cache_key": "poise-2.8.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/poise/versions/2.8.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/poise/versions/2.8.2/download",
+        "version": "2.8.2"
+      }
+    },
+    "poise-archive": {
+      "version": "1.5.0",
+      "identifier": "60d072e2d2b984baf1bf8896ab581fc9043ab1a9",
+      "dotted_decimal_identifier": "27250789614532996.52620150600805208.34948219842985",
+      "cache_key": "poise-archive-1.5.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/poise-archive/versions/1.5.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/poise-archive/versions/1.5.0/download",
+        "version": "1.5.0"
+      }
+    },
+    "poise-languages": {
+      "version": "2.1.2",
+      "identifier": "ea84709a3b4d8b7e76d2f456ceac6a8c79b33513",
+      "dotted_decimal_identifier": "66010763709074827.35596495480082092.117151569753363",
+      "cache_key": "poise-languages-2.1.2-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/poise-languages/versions/2.1.2/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/poise-languages/versions/2.1.2/download",
+        "version": "2.1.2"
+      }
+    },
+    "poise-python": {
+      "version": "1.7.0",
+      "identifier": "ebe824b70a39ef71fee428dcbc5b18aa4d19c677",
+      "dotted_decimal_identifier": "66401863914371567.32086928259857499.27119717041783",
+      "cache_key": "poise-python-1.7.0-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/poise-python/versions/1.7.0/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/poise-python/versions/1.7.0/download",
+        "version": "1.7.0"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "jmier_awesome_appliance_repair",
+        ">= 0.0.0"
+      ],
+      [
+        "poise",
+        "= 2.8.2"
+      ],
+      [
+        "poise-archive",
+        "= 1.5.0"
+      ],
+      [
+        "poise-languages",
+        "= 2.1.2"
+      ],
+      [
+        "poise-python",
+        "= 1.7.0"
+      ]
+    ],
+    "dependencies": {
+      "jmier_awesome_appliance_repair (0.1.0)": [
+
+      ],
+      "poise (2.8.2)": [
+
+      ],
+      "poise-archive (1.5.0)": [
+        [
+          "poise",
+          "~> 2.6"
+        ]
+      ],
+      "poise-languages (2.1.2)": [
+        [
+          "poise",
+          "~> 2.5"
+        ],
+        [
+          "poise-archive",
+          "~> 1.0"
+        ]
+      ],
+      "poise-python (1.7.0)": [
+        [
+          "poise",
+          "~> 2.7"
+        ],
+        [
+          "poise-languages",
+          "~> 2.0"
+        ]
+      ]
+    }
+  }
+}
