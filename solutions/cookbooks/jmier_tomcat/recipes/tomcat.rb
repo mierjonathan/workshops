@@ -17,7 +17,7 @@ user node['jmier_tomcat']['user']['name'] do
   node['jmier_tomcat']['group']
   home node['jmier_tomcat']['user']['home']
   shell node['jmier_tomcat']['user']['shell']
-  gid node['jmier_tomcat']['group'] 
+  gid node['jmier_tomcat']['group']
 end
 
 remote_file "/tmp/#{node['jmier_tomcat']['tomcat_tar_file']}" do

@@ -12,6 +12,15 @@ describe 'jmier_tomcat::default' do
     # https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md
     platform 'centos', '7'
 
+    before do
+      stub_command('[ $(stat -c %G /opt/tomcat/)  = "tomcat" ]').and_return(false)
+      stub_command("[ $(stat -c %a /opt/tomcat/conf | awk \'{print substr($1,2,1)}\' ) = \"5\" ]").and_return(false)
+      stub_command("[ $(stat -c %U /opt/tomcat/webapps)  = 'tomcat' ]").and_return(false)
+      stub_command("[ $(stat -c %U /opt/tomcat/work)  = 'tomcat' ]").and_return(false)
+      stub_command("[ $(stat -c %U /opt/tomcat/temp)  = 'tomcat' ]").and_return(false)
+      stub_command("[ $(stat -c %U /opt/tomcat/logs)  = 'tomcat' ]").and_return(false)
+    end
+
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
