@@ -13,6 +13,13 @@ jobs:
      steps:
        - name: Check out repository code
          uses: actions/checkout@v2
-       - run: chef exec rspec 
+       - name: chef exec rspec jmier_mongodb
+         run: chef exec rspec 
+         working-directory: solutions/cookbooks/jmier_mongodb/
+       - name: chef exec rspec jmier_tomcat
+         run: chef exec rspec
+         working-directory: solutions/cookbooks/jmier_tomcat/
+       - name: run kitchen converge jmier_mongodb
+         run: kitchen converge --color || (kitchen destroy && exit 1)
          working-directory: solutions/cookbooks/jmier_mongodb/
 
