@@ -20,6 +20,18 @@ jobs:
          run: chef exec rspec
          working-directory: solutions/cookbooks/jmier_tomcat/
        - name: run kitchen converge jmier_mongodb
-         run: kitchen converge --color || (kitchen destroy && exit 1)
+         run: |
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen destroy
          working-directory: solutions/cookbooks/jmier_mongodb/
-
+       - name: run kitchen converge jmier_tomcat
+         run: |
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen destroy
+         working-directory: solutions/cookbooks/jmier_tomcat/
