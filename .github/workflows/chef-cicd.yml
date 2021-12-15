@@ -13,5 +13,6 @@ jobs:
      steps:
        - name: Check out repository code
          uses: actions/checkout@v2
-       - run: chef exec rspec solutions/cookbooks/jmier_mongodb/
+       - run: cd solutions/cookbooks/jmier_mongodb/ && chef exec rspec 
+       - run: cd && ls -al
 
