@@ -1,0 +1,10 @@
+name: jmier_windows
+title: jmier_windows
+maintainer: mier.jonathan@outlook.com
+copyright: All Rights Reserved
+copyright_email: mier.jonathan@outook.com
+license: Apache-2.0
+summary: Jmier Windows Server 2019 security benchmark
+version: 0.1.0
+supports:
+  platform: windows

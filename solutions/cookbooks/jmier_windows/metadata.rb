@@ -1,6 +1,6 @@
 name 'jmier_windows'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Jonathan Mier'
+maintainer_email 'mier.jonathan@outlook.com'
 license 'All Rights Reserved'
 description 'Installs/Configures jmier_windows'
 version '0.1.0'

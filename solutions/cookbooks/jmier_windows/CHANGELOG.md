@@ -6,5 +6,4 @@ This file is used to list changes made in each version of the jmier_windows cook
 
 Initial release.
 
-- change 0
-- change 1
+- Attributized the cookbook
