@@ -7,23 +7,26 @@
 require 'spec_helper'
 
 describe 'jmier_mongodb::mongodb' do
-  context 'When all attributes are default, on Ubuntu 20.04' do
+  context 'When all attributes are default, on CentOS 7' do
     # for a complete list of available platforms and versions see:
     # https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md
-    platform 'ubuntu', '20.04'
+    platform 'centos', '7'
+    # let(:chef_run) do
+    #   runner = ChefSpec::ServerRunner.new(platform: 'centos', version: '7')
+    #   runner.converge(described_recipe)
+    # end
 
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
-  end
 
-  context 'When all attributes are default, on CentOS 8' do
-    # for a complete list of available platforms and versions see:
-    # https://github.com/chefspec/fauxhai/blob/master/PLATFORMS.md
-    platform 'centos', '8'
+    it 'installs package mongodb-org' do
+      expect(chef_run).to install_package('mongodb-org')
+    end
 
-    it 'converges successfully' do
-      expect { chef_run }.to_not raise_error
+    it 'starts and enables mongod service' do
+      expect(chef_run).to start_service('mongod')
+      expect(chef_run).to enable_service('mongod')
     end
   end
 end

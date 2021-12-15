@@ -1,0 +1,10 @@
+name: jmier_mongodb
+title: jmier_mongodb
+maintainer: mier.jonathan@outlook.com
+copyright: All Rights Reserved
+copyright_email: mier.jonathan@outlook.com
+license: Apache-2.0
+summary: Jmier Mongodb Default Inspec Profile
+version: 0.1.0
+supports:
+  platform: centos

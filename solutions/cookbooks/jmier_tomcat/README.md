@@ -45,3 +45,14 @@ $ kitchen-converge jmier-tomcat-centos-7
 # To run inspec tests
 $ kitchen verify jmier-tomcat-centos-7
 ```
+## ChefSpec and Inspec Testing
+
+## ChefSpec
+To run ChefSpec tests run the following command
+`chef exec rspec`
+ChefSpec test can be located in the `spec/unit/recipes` directory.
+
+## Inspec
+To run Inspec test run the following command 
+`kitchen verify`
+Inspec test can be located in the `test/integration/default` directory.

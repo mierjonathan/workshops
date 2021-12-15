@@ -4,7 +4,7 @@
 #
 # Copyright:: 2021, The Authors, All Rights Reserved.
 
-# Installs mongodb package 
+# Installs mongodb package
 package node['jmier_mongodb']['mongodb']['package_name'] do
   action :install
 end

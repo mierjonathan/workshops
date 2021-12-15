@@ -17,7 +17,7 @@ user node['jmier_tomcat']['user']['name'] do
   node['jmier_tomcat']['group']
   home node['jmier_tomcat']['user']['home']
   shell node['jmier_tomcat']['user']['shell']
-  gid node['jmier_tomcat']['group'] 
+  gid node['jmier_tomcat']['group']
 end
 
 remote_file "/tmp/#{node['jmier_tomcat']['tomcat_tar_file']}" do
@@ -51,7 +51,7 @@ end
 
 # loop through directories in /opt/tomcat to change ownership to tomcat
 node['jmier_tomcat']['tomcat_directories'].each do |dir|
-  execute "/opt/tomcat/#{dir}" do
+  execute "make tomcat owner of /opt/tomcat/#{dir}" do
     action :run
     command "chown -R tomcat /opt/tomcat/#{dir}"
     not_if "[ $(stat -c %U /opt/tomcat/#{dir})  = 'tomcat' ]"

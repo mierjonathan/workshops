@@ -7,3 +7,4 @@ This file is used to list changes made in each version of the jmier_tomcat cookb
 Initial release.
 
 - Attributized the cookbook 
+- Added Inspec and ChefSpec tests
