@@ -4,4 +4,4 @@
 #
 # Copyright:: 2021, The Authors, All Rights Reserved.
 
-include_recipe 'jmier_windows::ws2019_security_solutions'
+include_recipe 'jmier_windows::ws2019_security_benchmark'

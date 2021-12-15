@@ -103,6 +103,16 @@ default['jmier_windows'] = {
 Add `jmier_windows::default` to runlist via knife with `knife node run_list add <nodename> recipe['jmier_windows::default']`
 
 ## Testing cookbook
+`kitchen.yml` is configured to use the Vagrant driver. 
 ```
-chef-client -z -r "recipe[jmier_windows::default]"
+# To view available suites 
+$ kitchen list
+Instance                    Driver   Provisioner  Verifier  Transport  Last Action    Last Error
+jmier-windows-windows-2019  Vagrant  ChefInfra    Inspec    Winrm      <Not Created>  <None>
+
+# To deploy vm and run cookbook on vm
+$ kitchen converge jmier-windows-windows-2019
+
+# To run inspec tests
+$ kitchen verify jmier-windows-windows-2019
 ```

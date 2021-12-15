@@ -53,4 +53,7 @@ jmier-mongobd-centos-7  Vagrant  ChefZero     Inspec    Ssh        <Not Created>
 
 # To deploy vm and run cookbook on vm
 $ kitchen-converge jmier-mongobd-centos-7
+
+# To run inspec tests
+$ kitchen verify jmier-mongobd-centos-7
 ```
