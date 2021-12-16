@@ -1,0 +1,37 @@
+name: GitHub Actions Demo
+on: [push]
+jobs:
+  Verify:
+    runs-on: [self-hosted]
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: chef --version
+      - run: cookstyle solutions/cookbooks/
+  Test:
+     runs-on: [self-hosted]
+     steps:
+       - name: Check out repository code
+         uses: actions/checkout@v2
+       - name: chef exec rspec jmier_mongodb
+         run: chef exec rspec 
+         working-directory: solutions/cookbooks/jmier_mongodb/
+       - name: chef exec rspec jmier_tomcat
+         run: chef exec rspec
+         working-directory: solutions/cookbooks/jmier_tomcat/
+       - name: run kitchen converge jmier_mongodb
+         run: |
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen destroy
+         working-directory: solutions/cookbooks/jmier_mongodb/
+       - name: run kitchen converge jmier_tomcat
+         run: |
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen destroy
+         working-directory: solutions/cookbooks/jmier_tomcat/
