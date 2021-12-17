@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Chef CICD
 on: [push]
 jobs:
   Verify:
@@ -35,3 +35,11 @@ jobs:
            kitchen verify || (kitchen destroy && exit 1)
            kitchen destroy
          working-directory: solutions/cookbooks/jmier_tomcat/
+       - name: run kitchen converge jmier_windows
+         run: |
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen converge --color || (kitchen destroy && exit 1)
+           kitchen verify || (kitchen destroy && exit 1)
+           kitchen destroy
+         working-directory: solutions/cookbooks/jmier_windows/
